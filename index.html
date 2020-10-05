@@ -1,55 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
     <title>Marian Oprisan</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container container-main">
-        <nav class="navbar">
-            <img src="img/logo_blue.png" alt="logo" class="logo" width=90 height=30>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <section id="home">
-            <h1>Marian Oprisan</h1>
-            <p>This Website is under continuous development</p>
-        </section>
-
-        <section id="about">
-            <h1>About</h1>
-            <p>The about page is being updated.</p>
-        </section>
-        <section id="services">
-            <h1>Projects</h1>
-            <p>The projects page is being updated.</p>
-        </section>
-        <section id="contact">
-            <h1>Contact us</h1>
-            <p></p>
-        </section>
-
+  </head>
+  <body class="text-gray-800 antialiased">
+    <!-- Navbar -->
+    <nav
+      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
+            href="https://github.com/marian-oprisan"
+            >Marian Oprisan</a
+          ><button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class="text-white fas fa-bars"></i>
+          </button>
+        </div>
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+          id="example-collapse-navbar"
+        >
+         
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="https://www.linkedin.com/in/marian-oprisan-3663a919b/"
+                ><i
+                  class="text-blue-600 fab fa-linkedin text-xl leading-lg "
+                ></i
+                ><span class="lg:hidden inline-block ml-2">Profile</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <a
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="https://github.com/marian-oprisan"
+                ><i
+                  class="text-blue-600 sm:text-white fab fa-github text-xl leading-lg "
+                ></i
+                ><span class="lg:hidden inline-block ml-2">Projects</span></a
+              >
+            </li>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- Footer -->
-      <footer class="section-footer py-4 bg-primary">
-          
-        
+    </nav>
 
-      </footer>
+    <!-- Main Area -->
+    <main>
+      <div
+        class="relative pt-16 pb-32 flex content-center items-center justify-center"
+        style="min-height: 95vh;"
+      >
+        <div
+          class="absolute top-0 w-full h-full bg-cover sm:bg-center"
+          style='background-image: url("./assets/img/showcase.jpg");'
+        >
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-75 bg-black"
+          ></span>
+        </div>
+        <div class="container relative mx-auto" data-aos="fade-in">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div>
+                <h1 class="text-white font-semibold text-5xl md:text-3xl">
+                  Programmer and <span class="text-blue-600">Web Developer</span>
+                </h1>
+                <p class="mt-4 text-lg text-gray-300">
+                  Whether web based or mobile, I can turn your vision into a virtual reality.
+                </p>
+                <a href="#" class="bg-transparent hover:bg-blue-600 text-blue-600 font-semibold hover:text-white py-2 p-4 border border-blue-600 hover:border-transparent rounded inline-block mt-5 cursor-pointer">Get in Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+          style="height: 70px; transform: translateZ(0px);"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon points="2560 0 2560 100 0 100" class="text-gray-900 fill-current"></polygon>
+          </svg>
+        </div>
+      </div>
+      
+      <!-- About -->
+      <section class="relative py-20 bg-gray-900 text-white">
+    
+        <div id="about" class="container mx-auto px-4">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
+              <img
+                alt=""
+                class="max-w-full rounded-lg shadow-lg"
+                src="./assets/img/about.jpg"
+              />
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
+              <div class="md:pr-12">
+            
+                <small class="text-blue-600">About me</small>
+                <h3 class="text-4xl font-bold md:uppercase">Solutions Designer</h3>
+                <p class="mt-4 text-lg leading-relaxed">
+                  I prefer this term because it encapsulates better the meaning of my work. I design solutions.
+                </p>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-3 mr-3 text-blue-600"
+                          ><i class="fas fa-external-link-alt fa-2x"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl">
+                          Web Based
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-3 mr-3 text-blue-600"
+                          ><i class="fas fa-mobile-alt fa-2x"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl">
+                          Mobile Applications
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-3 mr-3 text-blue-600"
+                          ><i class="fas fa-info-circle fa-2x"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-xl">
+                          Support
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Technologies/Projects -->
+      <section class="pt-20 pb-40 -mb-10">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center text-center mb-24">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold uppercase">What I Do</h2>
+              <p class="text-lg leading-relaxed m-4 text-gray-600">
+                To be successful as a developer, one must be able to understand the environments your applications run in. I do.
+              </p>
+            </div>
+          </div>
+          <!-- Technologies Card Wrapper -->
+          <div class="flex flex-wrap">
+            <!-- Design -->
+            <div class="w-full md:w-4/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt=""
+                  src="./assets/img/first.jpg"
+                  class="shadow-lg rounded max-w-full mx-auto"
+                  style="max-width: 250px;"
+                  data-aos="flip-right"
+                />
+                <div class="pt-6 text-center" data-aos="fade-in">
+                  <h5 class="text-xl font-bold">Design</h5>
+                  <p class="mt-1 text-sm text-gray-600 uppercase font-semibold">
+                    HTML/CSS and JavaScript
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Web Development -->
+            <div class="w-full md:w-4/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt=""
+                  src="./assets/img/second.jpg"
+                  class="shadow-lg rounded max-w-full mx-auto"
+                  style="max-width: 250px;"
+                  data-aos="flip-right"
+                />
+                <div class="pt-6 text-center" data-aos="fade-in">
+                  <h5 class="text-xl font-bold">Web Development</h5>
+                  <p class="mt-1 text-sm text-gray-600 uppercase font-semibold">
+                    PHP, Python and JavaScript
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Android/iOS -->
+            <div class="w-full md:w-4/12 lg:mb-0 mb-12 px-4">
+              <div class="px-6">
+                <img
+                  alt=""
+                  src="./assets/img/third.jpg"
+                  class="shadow-lg rounded max-w-full mx-auto"
+                  style="max-width: 250px;"
+                  data-aos="flip-right"
+                />
+                <div class="pt-6 text-center" data-aos="fade-in">
+                  <h5 class="text-xl font-bold">Android and iOS</h5>
+                  <p class="mt-1 text-sm text-gray-600 uppercase font-semibold">
+                    Flutter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container text-center md:pt-20">
+            <h5 class="text-sm text-gray-700">
+              Now, of course I also use liraries like jQuery, Bootstrap, Tailwind javaScript animations libraries and more. I also use frameworks like Angular, Laravel, Flask, Django and Express. But nobody cares about that. Frameworks and libraries come and go.
+            </h5>
+          </div>
+        </div>
+      </section>
 
+      <!-- Contact Section -->
+      <section class="pb-20 relative block bg-gray-900 text-white">
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          style="height: 80px; transform: translateZ(0px);"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-900 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold text-white mt-20">Do you have a cool project to build?</h2>
+              <p class="text-lg leading-relaxed mt-5 -mb-10 sm:mb-5">
+                Fill in the form below and a very cool email will be sent to my inbox.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+      <!-- Contact Form -->
+      <section class="relative block md:py-24 lg:pt-0 bg-gray-900">
+        <div class="container mx-auto px-4 pb-20">
+          <div class="flex flex-wrap justify-center lg:-mt-64">
+            <div class="w-full lg:w-6/12 px-4">
+              <div
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
+                data-aos="fade-up-right"
+              >
+                <div class="flex-auto p-5 lg:p-10 bg-blue-800 text-white">
+                  <h4 class="text-2xl font-semibold">Contact Me</h4>
+                  <p class="leading-relaxed mt-1 mb-4">
+                    Throw a problem at me and I will throw back a solution.
+                  </p>
+                  <div class="relative w-full mb-3 mt-8">
+                    <label
+                      class="block uppercase text-xs font-bold mb-2"
+                      for="full-name"
+                      >Full Name</label
+                    ><input
+                      id="cform-name"
+                      type="text"
+                      class="px-3 py-3 placeholder-gray-600 text-gray-900 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="Full Name"
+                      style="transition: all 0.15s ease 0s;"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-xs font-bold mb-2"
+                      for="email"
+                      >Email</label
+                    ><input
+                      id="cform-email"
+                      type="email"
+                      class="px-3 py-3 placeholder-gray-600 text-gray-900 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="Email"
+                      style="transition: all 0.15s ease 0s;"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="block uppercase text-xs font-bold mb-2"
+                      for="message"
+                      >Message</label
+                    ><textarea
+                      id="cform-message"
+                      rows="4"
+                      cols="80"
+                      class="px-3 py-3 placeholder-gray-600 text-gray-900 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                      placeholder="Type a message..."
+                    ></textarea>
+                  </div>
+                  <div class="text-center mt-6">
+                    <button
+                      id="cform-send-btn" class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                      type="button"
+                      style="transition: all 0.15s ease 0s;"
+                    >
+                      Send Message
+                    </button>
+                    <!-- Contact Form Modal: TODO: Change to request to email server -->
+                    <div class="message">
+                      <h1>It appears that our email server is not running. I am working hard on it. Please send me an email from your local client.</h1>
+                      <p>My email is: marian.razvan.oprisan@gmail.com</p>
+                      <p>Or you can click <span class="mt-5 font-bold">Send Mail</span> below to load your default email app</p>
+                      <div class="modal-actions mt-5">
+                          <button id="cform-close" class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">Close</button>
+                          <button id="cform-send" class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">Send Email</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0px);"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-white fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">Check out some of my projects!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-gray-800">
+              I recommend checking out my github profile. There are always new and exciting projects coming up.
+            </h5>
+            <h5 class="text-lg mt-0 mb-2 text-blue-700">
+              <a href="https://github.com/marian-oprisan" class="hover:text-blue-500">Click here to do that.</a>
+            </h5>          
+          </div>
+
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2020 Marian Oprisan
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 
   <!-- JavaScript -->
-  <script src="js/main.js"></script>
-</body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    AOS.init({
+      delay: 200,
+      duration: 1000,
+      once: false
+    });
+  </script>
+
+  <script>
+    var message = document.querySelector('.message');
+    message.style.display = 'none';
+
+    // buttons
+    var cformSendBtn = document.getElementById("cform-send-btn");
+    
+    var cformClose = document.getElementById('cform-close');
+    
+    var cformSend = document.getElementById('cform-send');
+
+    function closeMessage() {
+      message.style.display = 'none';
+    }
+
+    cformClose.addEventListener('click', closeMessage);
+
+    cformSendBtn.addEventListener('click', function() {
+      message.style.display = 'block';
+    });
+
+    function sendEmail() {
+      var name = document.getElementById('cform-name')
+      var email = 'marian.razvan.oprisan@gmail.com';
+      var subject = 'Solution Needed (' + document.getElementById('cform-email').value + ")";
+
+      var message = 'Dear Marian,%0A';
+      message += document.getElementById('cform-message').value + '%0A';
+
+      message += '%0A%0ARegards, %0A';
+      message += document.getElementById('cform-name').value;
+
+      message = message.replace(/[\r\n]/g, "%0A");
+
+      // console.log(message);
+
+      document.location = "mailto:" + email + "?subject=" + subject + "&body=" + message;
+
+    }
+
+    cformSend.addEventListener('click', sendEmail);
+
+  </script>
+
 </html>
