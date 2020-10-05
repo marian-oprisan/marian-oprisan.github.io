@@ -415,7 +415,6 @@
               <a href="https://github.com/marian-oprisan" class="hover:text-blue-500">Click here to do that.</a>
             </h5>          
           </div>
-
         </div>
         <hr class="my-6 border-gray-400" />
         <div
@@ -432,65 +431,8 @@
   </body>
 
   <!-- JavaScript -->
-  <script>
-    function toggleNavbar(collapseID) {
-      document.getElementById(collapseID).classList.toggle("hidden");
-      document.getElementById(collapseID).classList.toggle("block");
-    }
-  </script>
-
+  <script src="./assets/js/navbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-  <script>
-    AOS.init({
-      delay: 200,
-      duration: 1000,
-      once: false
-    });
-  </script>
-
-  <script>
-    var message = document.querySelector('.message');
-    message.style.display = 'none';
-
-    // buttons
-    var cformSendBtn = document.getElementById("cform-send-btn");
-    
-    var cformClose = document.getElementById('cform-close');
-    
-    var cformSend = document.getElementById('cform-send');
-
-    function closeMessage() {
-      message.style.display = 'none';
-    }
-
-    cformClose.addEventListener('click', closeMessage);
-
-    cformSendBtn.addEventListener('click', function() {
-      message.style.display = 'block';
-    });
-
-    function sendEmail() {
-      var name = document.getElementById('cform-name')
-      var email = 'marian.razvan.oprisan@gmail.com';
-      var subject = 'Solution Needed (' + document.getElementById('cform-email').value + ")";
-
-      var message = 'Dear Marian,%0A';
-      message += document.getElementById('cform-message').value + '%0A';
-
-      message += '%0A%0ARegards, %0A';
-      message += document.getElementById('cform-name').value;
-
-      message = message.replace(/[\r\n]/g, "%0A");
-
-      // console.log(message);
-
-      document.location = "mailto:" + email + "?subject=" + subject + "&body=" + message;
-
-    }
-
-    cformSend.addEventListener('click', sendEmail);
-
-  </script>
-
+  <script src="./assets/js/aos_init.js"></script>
+  <script src="./assets/js/main.js"></script>
 </html>
