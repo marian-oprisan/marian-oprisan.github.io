@@ -1,22 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html style="scroll-behavior: smooth;">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./assets/img/apple-icon.png"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-    />
+
+    <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
 
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
     <title>Marian Oprisan</title>
@@ -32,7 +24,7 @@
         <div
           class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
         >
-          <a
+          <a target="_blank"
             class="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
             href="https://github.com/marian-oprisan"
             >Marian Oprisan</a
@@ -48,10 +40,24 @@
           class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
           id="example-collapse-navbar"
         >
-         
           <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
             <li class="flex items-center">
-              <a
+              <a onclick="toggleNavbar('example-collapse-navbar')"
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="#aboutme">
+                  <span class="inline-block ml-2">About Me</span></a>
+            </li>
+            <li class="flex items-center">
+              <a onclick="toggleNavbar('example-collapse-navbar')"
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="#whatido">
+                  <span class="inline-block ml-2">What I do</span></a>
+            </li>
+            <li class="flex items-center">
+              <a onclick="toggleNavbar('example-collapse-navbar')"
+                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="#contact">
+                  <span class="inline-block ml-2">Contact</span></a>
+            </li>
+            <li class="flex items-center md:ml-10">
+              <a onclick="toggleNavbar('example-collapse-navbar')" target="_blank"
                 class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 href="https://www.linkedin.com/in/marian-oprisan-3663a919b/"
                 ><i
@@ -61,15 +67,14 @@
               >
             </li>
             <li class="flex items-center">
-              <a
+              <a onclick="toggleNavbar('example-collapse-navbar')" target="_blank"
                 class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 href="https://github.com/marian-oprisan"
                 ><i
-                  class="text-blue-600 sm:text-white fab fa-github text-xl leading-lg "
+                  class="text-blue-600 sm:text-white fab fa-github text-xl leading-lg"
                 ></i
                 ><span class="lg:hidden inline-block ml-2">Projects</span></a
               >
-            </li>
             </li>
           </ul>
         </div>
@@ -101,7 +106,7 @@
                 <p class="mt-4 text-lg text-gray-300">
                   Whether web based or mobile, I can turn your vision into a virtual reality.
                 </p>
-                <a href="#" class="bg-transparent hover:bg-blue-600 text-blue-600 font-semibold hover:text-white py-2 p-4 border border-blue-600 hover:border-transparent rounded inline-block mt-5 cursor-pointer">Get in Touch</a>
+                <a href="#contact" class="bg-transparent hover:bg-blue-600 text-blue-600 font-semibold hover:text-white py-2 p-4 border border-blue-600 hover:border-transparent rounded inline-block mt-5 cursor-pointer">Get in Touch</a>
               </div>
             </div>
           </div>
@@ -124,15 +129,15 @@
       </div>
       
       <!-- About -->
-      <section class="relative py-20 bg-gray-900 text-white">
+      <section id="aboutme" class="relative py-20 bg-gray-900 text-white">
     
         <div id="about" class="container mx-auto px-4">
           <div class="items-center flex flex-wrap">
-            <div class="w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
+            <div class="hidden md:block w-full md:w-4/12 ml-auto mr-auto px-4" data-aos="fade-right">
               <img
                 alt=""
                 class="max-w-full rounded-lg shadow-lg"
-                src="./assets/img/about.jpg"
+                src="./assets/img/about.png"
               />
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4" data-aos="fade-left">
@@ -196,7 +201,7 @@
         </div>
       </section>
       <!-- Technologies/Projects -->
-      <section class="pt-20 pb-40 -mb-10">
+      <section id="whatido" class="pt-20 pb-40 -mb-10">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap justify-center text-center mb-24">
             <div class="w-full lg:w-6/12 px-4">
@@ -213,9 +218,9 @@
               <div class="px-6">
                 <img
                   alt=""
-                  src="./assets/img/first.jpg"
+                  src="./assets/img/first.png"
                   class="shadow-lg rounded max-w-full mx-auto"
-                  style="max-width: 250px;"
+                  style="max-width: 282px;"
                   data-aos="flip-right"
                 />
                 <div class="pt-6 text-center" data-aos="fade-in">
@@ -231,9 +236,9 @@
               <div class="px-6">
                 <img
                   alt=""
-                  src="./assets/img/second.jpg"
+                  src="./assets/img/second.png"
                   class="shadow-lg rounded max-w-full mx-auto"
-                  style="max-width: 250px;"
+                  style="max-width: 282px;"
                   data-aos="flip-right"
                 />
                 <div class="pt-6 text-center" data-aos="fade-in">
@@ -249,9 +254,9 @@
               <div class="px-6">
                 <img
                   alt=""
-                  src="./assets/img/third.jpg"
+                  src="./assets/img/third.png"
                   class="shadow-lg rounded max-w-full mx-auto"
-                  style="max-width: 250px;"
+                  style="max-width: 282px;"
                   data-aos="flip-right"
                 />
                 <div class="pt-6 text-center" data-aos="fade-in">
@@ -265,7 +270,7 @@
           </div>
           <div class="container text-center md:pt-20">
             <h5 class="text-sm text-gray-700">
-              Now, of course I also use liraries like jQuery, Bootstrap, Tailwind javaScript animations libraries and more. I also use frameworks like Angular, Laravel, Flask, Django and Express. But nobody cares about that. Frameworks and libraries come and go.
+              Now, of course I also use liraries like jQuery, Bootstrap, Tailwind, javaScript animations libraries and more. I also use frameworks like Angular, Laravel, Flask, Django and Express. But nobody cares about that. Frameworks and libraries come and go.
             </h5>
           </div>
         </div>
@@ -292,7 +297,7 @@
             ></polygon>
           </svg>
         </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+        <div id="contact" class="container mx-auto px-4 lg:pt-24 lg:pb-64">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">
               <h2 class="text-4xl font-semibold text-white mt-20">Do you have a cool project to build?</h2>
@@ -362,8 +367,7 @@
                       id="cform-send-btn" class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                       type="button"
                       style="transition: all 0.15s ease 0s;"
-                    >
-                      Send Message
+                    >Send Message
                     </button>
                     <!-- Contact Form Modal: TODO: Change to request to email server -->
                     <div class="message">
@@ -412,7 +416,7 @@
               I recommend checking out my github profile. There are always new and exciting projects coming up.
             </h5>
             <h5 class="text-lg mt-0 mb-2 text-blue-700">
-              <a href="https://github.com/marian-oprisan" class="hover:text-blue-500">Click here to do that.</a>
+              <a href="https://github.com/marian-oprisan" target="_blank" class="hover:text-blue-500">Click here to do that.</a>
             </h5>          
           </div>
         </div>
@@ -435,4 +439,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="./assets/js/aos_init.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="assets/js/smooth_scrool.js"></script>
 </html>

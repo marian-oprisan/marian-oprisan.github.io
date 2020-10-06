@@ -19,7 +19,7 @@ var message = document.querySelector('.message');
     });
 
     function sendEmail() {
-      var name = document.getElementById('cform-name')
+      var name = document.getElementById('cform-name').value;
       var email = 'marian.razvan.oprisan@gmail.com';
       var subject = 'Solution Needed (' + document.getElementById('cform-email').value + ")";
 
@@ -27,7 +27,7 @@ var message = document.querySelector('.message');
       message += document.getElementById('cform-message').value + '%0A';
 
       message += '%0A%0ARegards, %0A';
-      message += document.getElementById('cform-name').value;
+      message += name;
 
       message = message.replace(/[\r\n]/g, "%0A");
 
